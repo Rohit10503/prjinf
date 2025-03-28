@@ -1,0 +1,47 @@
+.container{
+    background-color: aliceblue;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.container .abttop{
+    width: 100%;
+   justify-content: space-evenly;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    border-radius: 1rem;
+}
+
+.abttop .profile-photo img{
+    width:35rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all ease-in-out 0.3s;
+
+}
+.abttop .profile-photo img:hover{
+    box-shadow: 1px 2px 7px black;
+}
+.container .abttop .desc h1{
+    font-size: 3rem;
+    color: rgb(253, 82, 119);
+}
+.container .abttop .desc h2{
+    font-size: 1.2rem;
+
+}
+
+@media only screen and (max-width: 640px) {
+    .container .abttop{
+        flex-direction: column;
+        gap: 1.2em;
+    }
+    .container .abttop .desc h1{
+        font-size: 1.2rem;
+        
+    }
+    .container .abttop .desc h2{
+        font-size: 0.9rem;
+    }    
+}

@@ -4,6 +4,7 @@ import "./navbar.css"
 import Head from 'next/head';
 import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome CSS
 import { Search,CircleX } from 'lucide-react';
+import Link from 'next/link';
 export default function Navbar() {
 
   const [openNavbar,setOpenNavbar]=useState(false)
@@ -24,7 +25,7 @@ const openNav=()=>{
   return (
     <div className='navbar-main'>
       <div className="nav-left">
-        <h1>logo</h1>
+        <h1 onClick={()=>{setOpenNavbar(false) }}><Link href="/">logo</Link></h1>
       </div>
       <div className="resp-bar " onClick={openNav}>
         {
@@ -40,7 +41,20 @@ const openNav=()=>{
           <li>
             <div className="nav-search"><input  type='text' placeholder='Search here...' /><Search /></div>
             </li>
-          <li>About</li>
+          <li onClick={()=>{setOpenNavbar(false) }}><Link href="/about">About</Link></li>
+          <li>Contact</li>
+          <li>
+          <button className='nav-btn'>Login/Signup </button>
+          </li>
+            </ul>
+      </div>
+
+      <div className="nav-right" >
+        <ul>
+          <li>
+            <div className="nav-search"><input  type='text' placeholder='Search here...' /><Search /></div>
+            </li>
+          <li onClick={()=>{setOpenNavbar(false) }}><Link href="/about">About</Link></li>
           <li>Contact</li>
           <li>
           <button className='nav-btn'>Login/Signup </button>
