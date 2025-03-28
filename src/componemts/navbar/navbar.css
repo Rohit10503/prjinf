@@ -42,21 +42,39 @@
     text-decoration: wavy;
     cursor: pointer;
 }
+.nav-search{
 
-.nav-search {
+    border-radius: 0.41rem;
     border: 1px solid grey;
+    background-color: aliceblue;
+    align-items: center;
+    padding-right: 1em;
+    display: flex;
+    transition: all ease-in-out 0.3s;
+}
+.nav-search:hover{
+    box-shadow: 8px 10px 20px rgb(235, 216, 216);
+    background-color: white;
+
+}
+.nav-search svg{
+    color:pink;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.nav-search input {
     font-size: 1rem;
     outline: none;
-    border-radius: 0.41rem;
     padding: 0.4rem 1rem;
     font-weight: normal;
     color: rgb(71, 70, 70);
     transition: all ease-in-out 0.3s;
 }
 
-.nav-search:focus {
-
-    box-shadow: 8px 10px 20px rgb(235, 216, 216);
+.nav-search input:focus {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    /* background-color: rgb(255, 255, 255); */
 }
 
 .nav-btn {

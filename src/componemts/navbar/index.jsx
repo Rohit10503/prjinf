@@ -1,20 +1,24 @@
 'use client';
-import React from 'react'
+import React, { useState } from 'react'
 import "./navbar.css"
 import Head from 'next/head';
 import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome CSS
-{/* <i className="fa fa-bars"></i> */}
+import { Search,CircleX } from 'lucide-react';
 export default function Navbar() {
 
+  const [openNavbar,setOpenNavbar]=useState(false)
 const openNav=()=>{
-  var x =document.getElementsByClassName("nav-right")[0];
-  if (x.style.display==='none' || x.style.display===''){
 
-    x.style.display="block";
-  }
-  else{
-    x.style.display="none"
-  }
+  // var x =document.getElementsByClassName("nav-right")[0];
+  // if (x.style.display==='none' || x.style.display===''){
+
+  //   x.style.display="block";
+  //   // x.innerHTML(<CircleX />)
+  // }
+  // else{
+  //   x.style.display="none"
+    
+  // }
 
 }
   return (
@@ -22,12 +26,20 @@ const openNav=()=>{
       <div className="nav-left">
         <h1>logo</h1>
       </div>
-      <div className="resp-bar ">
-        <div className='nav-icon'><i  className="fa fa-bars" onClick={openNav}></i></div>
+      <div className="resp-bar " onClick={openNav}>
+        {
+          openNavbar ? 
+          <div className='nav-icon' onClick={()=>{setOpenNavbar(false)}}><CircleX/></div>
+          :
+          <div className='nav-icon'onClick={()=>{setOpenNavbar(true)}}><i  className="fa fa-bars" ></i> </div>
+        }
       </div>
-      <div className="nav-right">
+      
+      <div className="nav-right" style={{ display: openNavbar ? 'block' : 'none' }}>
         <ul>
-          <li><input className='nav-search' type='text' placeholder='Search here...' /></li>
+          <li>
+            <div className="nav-search"><input  type='text' placeholder='Search here...' /><Search /></div>
+            </li>
           <li>About</li>
           <li>Contact</li>
           <li>
