@@ -52,11 +52,16 @@
     }
     .feature-main{
     
-    overflow-x: scroll;
+    
     width: 100%;
-    scrollbar-width: 1;
+
     
     }
+    .feature-main ul{
+        display: flex;
+        flex-wrap: wrap;
+        
+        }
     .feature-main ul li{
         width: 8em;
         padding: 0.3rem;
