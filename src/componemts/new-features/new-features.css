@@ -1,0 +1,72 @@
+.new-fea-tag{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgb(31, 31, 30);
+}
+.feature-main{
+    width: 80%;
+    margin: 0 auto;
+}
+.feature-main ul{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 1em;
+}
+.feature-main ul li{
+    width:10rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    border: 1px solid rgb(202, 199, 200);
+    padding: 1em;
+    transition: all ease-in-out 0.3s;
+    border-radius: 1rem;
+    position: relative;
+}
+.feature-main ul li:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 14px 18px rgb(202, 199, 200);
+ 
+
+
+}
+.feature-main ul li .fea-img{
+    margin: 0 auto;
+    transition: all ease-in-out 0.2s;
+    color: rgb(253, 82, 119);
+}
+
+.feature-main ul li .fea-name{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .feature-main{
+    
+    overflow-x: scroll;
+    width: 100%;
+    scrollbar-width: 1;
+    
+    }
+    .feature-main ul li{
+        width: 8em;
+        padding: 0.3rem;
+       
+
+    }
+    .feature-main ul li .fea-name{
+        font-size: 1rem;
+    }
+    .feature-main ul li svg{
+        height: 2.5rem;
+        
+    }
+
+
+}
