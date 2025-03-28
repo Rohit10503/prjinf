@@ -47,6 +47,9 @@
 }
 
 @media (max-width: 768px) {
+    .new-fea-tag{
+        font-size: 1.2rem
+    }
     .feature-main{
     
     overflow-x: scroll;
